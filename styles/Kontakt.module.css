@@ -1,0 +1,216 @@
+.container {
+  min-height: 100vh;
+}
+
+.h1 {
+  text-align: left;
+  padding: 170px 220px 20px;
+  font-size: 40px;
+  text-shadow: 0 0 3px #ccc;
+}
+
+.sectionContainer {
+  padding-bottom: 150px;
+}
+
+.para {
+  text-align: justify;
+  padding: 0 220px 20px;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.p {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.65;
+  padding: 0 220px;
+}
+
+.form label:nth-child(odd) {
+  font-weight: 500;
+}
+
+.asterik {
+  color: #6c7678;
+  margin-left: 2px;
+}
+
+.inputField {
+  max-width: 500px;
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.65;
+  cursor: text;
+}
+
+.radioBtn {
+  margin-right: 10px;
+}
+
+.labelMessage {
+  margin-top: 10px;
+}
+
+.textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 250px;
+}
+
+.submitBtn {
+  width: 180px;
+  height: 50px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #006ee5;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  font-size: 18px;
+  transition: 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.submitBtn:hover,
+.popUpBtn:hover {
+  transition: 0.5s ease-in-out;
+  background-color: #0063cc;
+}
+
+.submitBtn:focus,
+.popUpBtn:focus {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.note {
+  margin: 20px 0;
+}
+
+.note span {
+  font-weight: 500;
+}
+
+.popUp {
+  width: 400px;
+  background-color: #fdfdfd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 2px;
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translate(-50%, 89%) scale(0.1);
+  transition: transform 0.5s;
+  text-align: center;
+  padding: 0 30px 30px;
+  visibility: hidden;
+}
+
+.openPopUp {
+  visibility: visible;
+  top: 48%;
+  transform: translate(-50%, 89%) scale(1);
+}
+
+.img {
+  background-color: #fff;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
+}
+
+.popUp p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.popUpBtn {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #006ee5;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+@media (max-width: 1295px) {
+  .openPopUp {
+    top: 49%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .openPopUp {
+    top: 48%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .openPopUp {
+    top: 49%;
+  }
+}
+
+@media (max-width: 768px) {
+  .openPopUp {
+    top: 49%;
+  }
+}
+
+@media (max-width: 425px) {
+  .openPopUp {
+    top: 48%;
+  }
+}
+
+@media (max-width: 375px) {
+  .openPopUp {
+    top: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .openPopUp {
+    top: 49%;
+    transform: translate(-50%, 106%) scale(1);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .h1 {
+    padding: 170px 80px 20px;
+  }
+  .para,
+  .form {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .h1 {
+    font-size: 35px;
+    text-align: center;
+    padding: 170px 20px 20px;
+  }
+  .para,
+  .form {
+    padding: 0 20px;
+  }
+}

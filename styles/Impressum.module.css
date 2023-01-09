@@ -1,0 +1,99 @@
+.container {
+  min-height: 100vh;
+}
+
+.container a {
+  color: #4e5556;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+.sectionContainerDisclaimer,
+.sectionContainer4 {
+  padding-bottom: 150px;
+}
+
+.h1 {
+  text-align: left;
+  padding: 170px 220px 20px;
+  font-size: 40px;
+  text-shadow: 0 0 3px #ccc;
+}
+
+.h2 {
+  text-align: left;
+  padding: 20px 220px;
+  font-size: 30px;
+  text-shadow: 0 0 3px #ccc;
+}
+
+.h3 {
+  text-align: left;
+  padding: 0 220px 20px;
+  font-size: 25px;
+  text-shadow: 0 0 3px #ccc;
+}
+
+.h4 {
+  text-align: left;
+  padding: 0 220px 20px;
+  font-size: 22.5px;
+  text-shadow: 0 0 3px #ccc;
+}
+
+.para {
+  padding: 0 220px;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.65;
+}
+
+.p {
+  margin-bottom: 20px;
+}
+
+.pSubtitle {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .h1 {
+    padding: 170px 80px 20px;
+  }
+
+  .h2 {
+    padding: 20px 80px;
+  }
+
+  .h3,
+  .h4 {
+    padding: 0 80px 20px;
+  }
+
+  .para {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .h1 {
+    font-size: 35px;
+    text-align: center;
+    padding: 170px 20px 20px;
+  }
+
+  .h2 {
+    padding: 20px 20px;
+  }
+
+  .h3,
+  .h4 {
+    padding: 0 20px 20px;
+  }
+
+  .para {
+    padding: 0 20px;
+  }
+}

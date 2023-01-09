@@ -1,0 +1,58 @@
+.container {
+  min-height: 100vh;
+  padding-bottom: 150px;
+}
+
+.h1 {
+  text-align: left;
+  padding: 170px 220px 20px 220px;
+  font-size: 40px;
+  text-shadow: 0 0 3px #ccc;
+}
+
+.subContainer {
+  padding: 0 220px 0 220px;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.65;
+  list-style: inside;
+}
+
+.mainHeading {
+  font-weight: bold;
+}
+
+.sublist {
+  margin-left: 30px;
+  font-weight: normal;
+}
+
+@media (max-width: 767px) {
+  .h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    margin-bottom: 173px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    margin-bottom: 173px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    margin-bottom: 143px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin-bottom: 319px;
+  }
+}
