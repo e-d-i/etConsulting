@@ -26,7 +26,7 @@ function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("http://www.e-t-consulting.de/api/mail", {
+      await fetch("http://www.e-t-consulting.com/api/mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
