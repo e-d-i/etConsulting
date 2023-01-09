@@ -25,7 +25,7 @@ function Kontakt() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("https://www.e-t-consulting.com/api/mail", {
+      await fetch("http://localhost:3000/api/mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
