@@ -13,12 +13,12 @@ function NavbarLeistungen() {
       setSubNavigation(false);
     }
   };
-  useEffect(() => {
+  useEffect((changeSubNavigation) => {
     window.addEventListener("scroll", changeSubNavigation);
     return () => {
       window.removeEventListener("scroll", changeSubNavigation);
     };
-  }, [changeSubNavigation]);
+  }, []);
 
   return (
     <header>
