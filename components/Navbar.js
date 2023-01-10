@@ -13,12 +13,12 @@ function Navbar() {
       setstickyNav(false);
     }
   };
-  useEffect((changeHeaderNav) => {
+  useEffect(() => {
     window.addEventListener("scroll", changeHeaderNav);
     return () => {
       window.removeEventListener("scroll", changeHeaderNav);
     };
-  }, []);
+  }, [changeHeaderNav]);
 
   const router = useRouter();
 
@@ -31,12 +31,12 @@ function Navbar() {
       setHamIsVisible(false);
     }
   };
-  useEffect((changeNavigation) => {
+  useEffect(() => {
     window.addEventListener("resize", changeNavigation);
     return () => {
       window.removeEventListener("resize", changeNavigation);
     };
-  }, []);
+  }, [changeNavigation]);
 
   let hamRef = useRef();
   useEffect(() => {
