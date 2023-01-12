@@ -13,9 +13,7 @@ function ContactUs() {
     anliegen: "",
     message: "",
   });
-
   const { name, email, anfragesteller, anliegen, message } = values;
-
   const handleChange = (e) => {
     setValues({
       ...values,
@@ -72,11 +70,17 @@ function ContactUs() {
           <label htmlFor="name">
             姓名<span className={styles.asterik}>*</span>
           </label>
+          {values.name === "" ||
+            (!values.name.match("^([^0-9!§$%&/|(){}=?`^*+'#<>;,:._@~])+$") && (
+              <p className={styles.helperText}>
+                请填写输入框。不允许使用数字和特殊字符。
+              </p>
+            ))}
           <input
             className={styles.inputField}
             type="text"
             name="name"
-            value={name}
+            value={values.name}
             maxLength="50"
             onChange={handleChange}
             pattern="^([^0-9!§$%&/|(){}=?`^*+'#<>;,:._@~])+$"
@@ -86,14 +90,22 @@ function ContactUs() {
           <label htmlFor="email">
             邮件地址<span className={styles.asterik}>*</span>
           </label>
+          {values.email === "" ||
+            (!values.email.match(
+              "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+            ) && (
+              <p className={styles.helperText}>
+                请输入有效的邮件地址。 不允许使用特殊字符。
+              </p>
+            ))}
           <input
             className={styles.inputField}
             type="text"
             name="email"
-            value={email}
+            value={values.email}
             maxLength="50"
             onChange={handleChange}
-            pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\u0022(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\u0022)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+            pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
             required
           />
 
@@ -101,11 +113,19 @@ function ContactUs() {
             学生 / 大学 / 机构 / 公司 / 机关
             <span className={styles.asterik}>*</span>
           </label>
+          {values.anfragesteller === "" ||
+            (!values.anfragesteller.match(
+              "^([^0-9!§$%&/|(){}=?`^*+'#<>;,:._@~])+$"
+            ) && (
+              <p className={styles.helperText}>
+                请填写输入框。不允许使用数字和特殊字符。
+              </p>
+            ))}
           <input
             className={styles.inputField}
             type="text"
             name="anfragesteller"
-            value={anfragesteller}
+            value={values.anfragesteller}
             maxLength="50"
             onChange={handleChange}
             pattern="^([^0-9!§$%&/|(){}=?`^*+'#<>;,:._@~])+$"
